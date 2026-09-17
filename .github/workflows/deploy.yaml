@@ -8,19 +8,19 @@ jobs:
   deploy:
     runs_on: ubuntu-latest
   
-  steps:
-    - name: Checkout code
-      uses: actions/checkout@v6
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
        
-    - name: Deploy via SSH
-      uses: appleboy/ssh-action@v1
-      with:
-        host: ${{ secrets.SSH_HOST }}
-        username: ubuntu
-        key: ${{ secrets.SSH_KEY }}
-        script: |
-          cd ~/WebBuild.ai
-          git pull:
-          docker-compose down
-          docker-compose up -d --build
-          
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ubuntu
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            cd ~/WebBuild.ai
+            git pull
+            docker-compose down
+            docker-compose up -d --build
+            
