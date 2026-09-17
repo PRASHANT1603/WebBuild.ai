@@ -140,11 +140,11 @@ function Home() {
                     className='mt-8 max-w-2xl mx-auto text-zinc-400 text-lg'
                 >
                     Describe your idea and let AI generate a modern,
-                    responsive, production-ready website.
+                    responsive, production-ready website. chala ja jhantu
                 </motion.p>
 
 
-                <button className="px-10 py-4 rounded-xl bg-white text-black font-semibold hover:scale-105 transition mt-12" onClick={() =>userData? navigate("/dashboard"):setOpenLogin(true)}>{userData ? "Chala ja bhosdike" : "Get Started"}</button>
+                <button className="px-10 py-4 rounded-xl bg-white text-black font-semibold hover:scale-105 transition mt-12" onClick={() =>userData? navigate("/dashboard"):setOpenLogin(true)}>{userData ? "Go to dashboard" : "Get Started"}</button>
 
             </section>
             {!userData && <section className='max-w-7xl mx-auto px-6 pb-32'>
