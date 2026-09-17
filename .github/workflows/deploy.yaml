@@ -1,28 +1,27 @@
-name: deploy to ec2
+
+name: Deploy to EC2
+
 on:
   push:
     branches:
-      -main
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-  
+
     steps:
       - name: Checkout code
-        uses: actions/checkout@v6
-       
+        uses: actions/checkout@v4
+
       - name: Deploy via SSH
-        uses: appleboy/ssh-action@v1
+        uses: appleboy/ssh-action@v1.2.0
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ubuntu
           key: ${{ secrets.SSH_KEY }}
           script: |
             cd ~/WebBuild.ai
-            git pull
-            docker-compose down
-            docker-compose up -d --build
-
-            # Optional: Add any additional commands you want to run on the server after deployment
-            
+            git pull origin main
+            sudo docker compose down
+            sudo docker compose up -d --build
