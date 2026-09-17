@@ -140,7 +140,7 @@ function Home() {
                     className='mt-8 max-w-2xl mx-auto text-zinc-400 text-lg'
                 >
                     Describe your idea and let AI generate a modern,
-                    responsive, production-ready website. chala ja jhantu
+                    responsive, production-ready website. sorry, I accidentally pressed enter. Here is the continuation of the code:
                 </motion.p>
 
 
