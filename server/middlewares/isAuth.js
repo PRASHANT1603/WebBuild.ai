@@ -3,6 +3,7 @@ import User from "../models/user.model.js"
 const isAuth=async (req,res,next)=>{
 try {
     const token=req.cookies.token
+    console.log("token",token)
     if(!token){
         return res.status(400).json({message:"token not found"})
     }
