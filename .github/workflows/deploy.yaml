@@ -23,4 +23,6 @@ jobs:
             git pull
             docker-compose down
             docker-compose up -d --build
+
+            # Optional: Add any additional commands you want to run on the server after deployment
             
