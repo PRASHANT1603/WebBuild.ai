@@ -21,7 +21,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://web-build-ai-xxro-git-main-prashant-df9b.vercel.app",
+      "https://web-build-ai-xxro-5mqlrwtib-prashant-df9b.vercel.app",
     ],
     credentials: true,
   }),
