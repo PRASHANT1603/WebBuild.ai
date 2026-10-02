@@ -19,10 +19,8 @@ app.use(cookieParser())
 
 app.use(
   cors({
-    origin: [
-      "http://localhost:5173",
-      "https://web-build-ai-xxro-5mqlrwtib-prashant-df9b.vercel.app",
-    ],
+    origin: ["http://localhost:5173",
+         "https://web-build-ai-ybuf.vercel.app/"],
     credentials: true,
   }),
 );
